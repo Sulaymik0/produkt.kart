@@ -1,1 +1,2 @@
-# produkt.kart
+# product.card
+проект по верстке продуктовых карт
