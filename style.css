@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 13;
+  font-weight: 400;
+  color:#515076;
+}
+
+.title {
+  font-size: 70px;
+  line-height: 78px;
+  text-align: center;
+  margin: 0;
+}
+
+.bosslist {
+  list-style: none;
+  width: 1110;
+  height: 1191;
+  padding: 0;
+  margin: 85px;
+}
+
+.card {
+  box-sizing: border-box ;
+  max-width: 340px;
+  max-height: 573px;
+  background-color: #f7f7fa;
+  padding: 25px;
+  margin: 45px;
+}
+
+
+.info {
+  color: #A5A3B9;
+  display:block;
+  font-size: 12px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+.consist{
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+.substances {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.money {
+   font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 25px;
+  }
+
+.price_wrapper {
+  display:flex;
+  justify-content:space-between;
+  border: 1px;
+}
+
