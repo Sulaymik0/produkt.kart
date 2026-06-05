@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 13;
   font-weight: 400;
-  color:#515076;
+  color: #515076;
 }
 
 .title {
@@ -21,7 +21,7 @@ body {
 }
 
 .card {
-  box-sizing: border-box ;
+  box-sizing: border-box;
   max-width: 340px;
   max-height: 573px;
   background-color: #f7f7fa;
@@ -29,10 +29,9 @@ body {
   margin: 45px;
 }
 
-
 .info {
   color: #A5A3B9;
-  display:block;
+  display: block;
   font-size: 12px;
   line-height: 24px;
   margin-bottom: 5px;
@@ -52,7 +51,7 @@ body {
   margin-bottom: 15px;
 }
 
-.consist{
+.consist {
   font-size: 13px;
   line-height: 18px;
   margin-bottom: 5px;
@@ -71,14 +70,14 @@ body {
 }
 
 .money {
-   font-size: 20px;
+  font-size: 20px;
   line-height: 24px;
   margin-bottom: 25px;
-  }
+}
 
 .price_wrapper {
-  display:flex;
-  justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
   border: 1px;
 }
 
