@@ -1,35 +1,61 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+@font-face {
+  font-family: Montserrat;
+  src: url("fonts/Montserrat.ttf");
+}
+
 body {
-  font-family: Arial, sans-serif;
   font-size: 13;
+  line-height: 18px;
   font-weight: 400;
   color: #515076;
+  background-image: url("images/dandelion.png");
+  background-size: 790px auto;
+  background-repeat: no-repeat;
+  background-position-x: calc(100%/2 - 160px);
 }
 
 .title {
   font-size: 70px;
   line-height: 78px;
   text-align: center;
-  margin: 0;
+}
+
+
+.catalog_title {
+  margin-top: 220px;
+  margin-bottom: 110px;
 }
 
 .bosslist {
   list-style: none;
-  width: 1110;
-  height: 1191;
-  padding: 0;
-  margin: 85px;
+  width: 1110px;
+  padding: left 20px;
+  margin: 0 auto;
+  display: flex;
+  gap: 45px;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .card {
   box-sizing: border-box;
-  max-width: 340px;
-  max-height: 573px;
+  width: 340px;
+  min-height: 573px;
   background-color: #f7f7fa;
   padding: 25px;
-  margin: 45px;
+  display: flex;
+  flex-direction: column;
 }
 
-.info {
+.info_category {
   color: #A5A3B9;
   display: block;
   font-size: 12px;
@@ -38,46 +64,66 @@ body {
   margin-top: 30px;
 }
 
-.subtitle {
+.subtitle_name {
   font-size: 20px;
   line-height: 27px;
   font-weight: 700;
   margin-bottom: 5px;
 }
 
-.description {
-  font-size: 13px;
+.card_description {
   line-height: 18px;
   margin-bottom: 15px;
 }
 
-.consist {
+.compound_consist {
   font-size: 13px;
   line-height: 18px;
   margin-bottom: 5px;
+  margin-left: 0;
 }
 
 .substances {
   font-size: 13px;
   line-height: 18px;
-  margin-bottom: 5px;
+  font-weight: normal;
+  padding-left: 16px;
+  margin-top: 5px;
+  margin: 0;
+  
 }
 
-.price {
+.point {
+  margin-bottom: 5px;
+  left: 0;
+}
+
+
+.card_price {
   font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 25px;
+  line-height: 50px;
+  margin-bottom: 0;
 }
 
 .money {
   font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 25px;
+  line-height: 50px;
+  margin-bottom: 0;
 }
 
 .price_wrapper {
-  display: flex;
+   display: flex;
   justify-content: space-between;
-  border: 1px;
 }
+
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.card_compound {
+  margin-bottom: 15px;
+}
+
 
