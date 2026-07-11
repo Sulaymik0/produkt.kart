@@ -21,14 +21,14 @@ changeColorFirstCardButton.addEventListener ('click', () => {
 
 const openGoogleButoon = document.querySelector('#open-google');
 const googleURL = 'https://google.com';
-openGoogleButoon.addEventListener('click',openGoogle)
+openGoogleButoon.addEventListener('click', openGoogle)
 
 function openGoogle() {
   const answer = confirm('вы действительно хотите google?');
 
   if (answer === true) {
     window.open('https://google.com')
-  } else{
+  } else {
     return;
   }
 }
