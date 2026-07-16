@@ -1,7 +1,7 @@
 // покраска всех карточек
 
 const changeColorCardButton = document.querySelector('#change-Color-all-card');
-const greenColorHash = '#d9b513';
+const greenColorHash = '#43c160';
 const blueColorHash = '#4A90E2';
 
 changeColorCardButton.addEventListener('click', () => {
