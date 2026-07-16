@@ -11,41 +11,41 @@ const LIGHT_SPEED = 299792458
 
 function checkSpeed(speed) {
   if (speed > LIGHT_SPEED) {
-    console.log('Сверхсветовая скорость')
+    console.log('Сверхсветовая скорость');
   } else if (speed < LIGHT_SPEED) {
-    console.log('Субсветовая скорость')
+    console.log('Субсветовая скорость');
   } else {
-    console.log('Скорость света')
+    console.log('Скорость света');
   }
 }
 
-checkSpeed(300792458)
-checkSpeed(299792457)
-checkSpeed(299792458)
+checkSpeed(300792458);
+checkSpeed(299792457);
+checkSpeed(299792458);
 
 
 
 let product = 'iPhone 16';
 let price = 1600;
 
-function buyBudget(budget) {
-  if (budget >= price) {
+function buyProduct(product) {
+  if (product >= price) {
     console.log(`${"iPhone 16"} приобретён. Спасибо за покупку!`)
   } else {
-    console.log(`Вам не хватает ${price - budget}$, пополните баланс`)
+    console.log(`Вам не хватает ${price -product}$, пополните баланс`)
   }
 }
 
-buyBudget(2000)
-buyBudget(1200)
+buyProduct(2000);
+buyProduct(1200);
 
 
 
-function seyHello() {
+function sayHello() {
   console.log("Привет!")
 }
 
-seyHello();
+sayHello();
 
 let cheetahSpeed = 120;
 let userName = "Metkiy";
