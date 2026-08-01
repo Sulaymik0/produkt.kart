@@ -48,5 +48,5 @@ function sayHello() {
 sayHello();
 
 let cheetahSpeed = 120;
-let userName = "Metkiy";
-let age = 19;
+let Name = "Metkiy";
+age = 19;
