@@ -19,25 +19,30 @@ const car = {
   color: "black",
   engine: "6.2",
   transmission: "automatic",
-  owner: person
 }
-console.log(car)
+  car.owner = person;
+
+console.log(car);
+console.log(car.owner.name);
 
 
 
 // мксимальная скорасть
 function ensureMaxSpeed(car) {
-  if (car.hasOwnProperty("maxSpeed")) {
-  return;}
+  if (car.hasOwnProperty("maxSpeed"))
+    return;
 
   car.maxSpeed = 390;
 }
-  console.log(ensureMaxSpeed)
+
+console.log(ensureMaxSpeed(car));
+
 
 
 // #6 модель
 function showProperty(obj, property) {
-  console.log(obj[property]);
+
+console.log(obj[property]);
 }
 
 
