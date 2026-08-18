@@ -47,8 +47,8 @@ console.log(obj[property]);
 
 
 //№7 массив
-const products = ["молоко", "хлеб", "мясо", "сыр",];
-console.log(products)
+//const products = ["молоко", "хлеб", "мясо", "сыр",];
+//console.log(products)
 
 
 
@@ -99,7 +99,7 @@ const onePieceBooks = [
   {
     name: "One Piece: Alabasta",
      author: "Эйитиро Ода",
-     year: "",
+     year: "2000",
      genre: "Манга",
  },
 

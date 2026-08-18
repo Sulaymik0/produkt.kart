@@ -28,16 +28,16 @@ checkSpeed(299792458);
 let product = 'iPhone 16';
 let price = 1600;
 
-function buyProduct(product) {
+//function buyProduct(product) {
   if (product >= price) {
     console.log(`${"iPhone 16"} приобретён. Спасибо за покупку!`)
   } else {
     console.log(`Вам не хватает ${price -product}$, пополните баланс`)
   }
-}
+//}
 
-buyProduct(2000);
-buyProduct(1200);
+//buyProduct(2000);
+//buyProduct(1200);
 
 
 
