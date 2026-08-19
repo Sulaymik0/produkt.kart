@@ -18,14 +18,14 @@ const movies = [
     "Gladiator"
 ];
 
-const movieExists = movies.includes("Interstellar");
+const isMovieExists = movies.includes("Interstellar");
 
-console.log(movieExists);
+console.log(isMovieExists);
 
 
 // 4. Функция, которая переворачивает массив
 function reverseArray(array) {
-    return array.reverse();
+    array.reverse();
 }
 
 const reversedNumbers = reverseArray(numbers);
@@ -35,33 +35,40 @@ console.log(reversedNumbers);
 console.log(reversedMovies);
 
 
-// Вывели в консоль массив тех комментариев, почта пользователей которых содержит ".com"
-const omments = comments.filter(comment => comment.email?.includes('.com'));
-console.log(comments);
+// массив тех комментариев, почта пользователей которых содержит ".com"
+const commentsWithComEmail = comments.filter(
+comment => comment.email?.includes(".com"));
 
+console.log(commentsWithComEmail);
 
 
 /*
-Перебрали массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2,
+массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2,
 а те, у кого id больше 5, имели postId: 1
 */
-comments.forEach(comment => {
-  comment.postId = comment.id <= 5 ? 2 : 1;
-});
+function updatePostId(comments) {
+   comments.forEach(comment => {
+   comment.postId = comment.id <= 5 ? 2 : 1;});
+  }
+
+updatePostId(comments);
 console.log(comments);
 
 
 
-//Перебрали массив, что бы объекты состояли только из айди и имени
+// массив, что бы объекты состояли только из айди и имени
 const shortComments = comments.map(({ id, username }) => ({ id, username }));
 console.log(shortComments);
 
 
 /*
-Перебираем массив, добавляем объектам свойство isInvalid и проверяем:
+ массив, добавляем объектам свойство isInvalid и проверяем:
  если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
  */
-comments.forEach(comment => {
-  comment.isInvalid = (comment.body?.length || comment.body?.length || 0) > 180;
-});
+function checkInvalidComments(comments) {
+  comments.forEach(comment => {
+  comment.isInvalid = (comment.body?.length || 0) > 180;});
+}
+
+checkInvalidComments(comments);
 console.log(comments);
