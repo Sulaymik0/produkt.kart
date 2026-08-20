@@ -37,19 +37,17 @@ console.log(reversedMovies);
 
 // массив тех комментариев, почта пользователей которых содержит ".com"
 const commentsWithComEmail = comments.filter(
-comment => comment.email?.includes(".com"));
-
-console.log(commentsWithComEmail);
+  (comment) => comment.email?.includes(".com")
+);
 
 
 /*
 массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2,
 а те, у кого id больше 5, имели postId: 1
 */
-function updatePostId(comments) {
-   comments.forEach(comment => {
-   comment.postId = comment.id <= 5 ? 2 : 1;});
-  }
+comments.forEach((comment) => {
+  comment.postId = comment.id <= 5 ? 2 : 1;
+});
 
 updatePostId(comments);
 console.log(comments);
@@ -66,8 +64,9 @@ console.log(shortComments);
  если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
  */
 function checkInvalidComments(comments) {
-  comments.forEach(comment => {
-  comment.isInvalid = (comment.body?.length || 0) > 180;});
+  comments.forEach((comment) => {
+    comment.isInvalid = (comment.body?.length || 0) > 180;
+  });
 }
 
 checkInvalidComments(comments);
