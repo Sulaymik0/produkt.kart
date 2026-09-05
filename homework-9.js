@@ -49,7 +49,7 @@ comments.forEach((comment) => {
   comment.postId = comment.id <= 5 ? 2 : 1;
 });
 
-updatePostId(comments);
+
 console.log(comments);
 
 
