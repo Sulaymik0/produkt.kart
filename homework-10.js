@@ -1,3 +1,4 @@
+
 import { productCards } from "./productСards.js";
 
 const productContainer = document.querySelector(".bosslist");
@@ -7,36 +8,43 @@ const template = document.querySelector("#card-template");
 // Ключ — название продукта
 // Значение — описание продукта
 
-const productDescriptions = productCards.reduce((acc, product) => {acc.push({
-  [product.name]: product.description
+const productDescriptions = productCards.reduce((acc, product) => {
+  acc.push({
+    [product.name]: product.description
   });
 
-  return acc;}, []);
+  return acc;
+}, []);
 
 console.log(productDescriptions);
-
 
 // 2. Получаем количество карточек через prompt
 
 function getAmountOfCards() {
-const amountOfCards = prompt("Сколько карточек отобразить? От 1 до 5");
+  const amountOfCards = prompt(
+    "Сколько карточек отобразить? От 1 до 5"
+  );
 
-if (amountOfCards >= 1 && amountOfCards <= 5) {
-return Number(amountOfCards);}
+  if (amountOfCards >= 1 && amountOfCards <= 5) {
+    return Number(amountOfCards);
+  }
 
-return null;}
-
+  return null;
+}
 
 // 3. Создаём карточки
+
 function renderCards(cards) {
   productContainer.innerHTML = "";
 
   cards.forEach((product) => {
     const card = template.content.cloneNode(true);
 
-    card.querySelector(".card_image").src = `./images/${product.photo}.png`;
+    card.querySelector(".card_image").src =
+      `./images/${product.photo}.png`;
 
-    card.querySelector(".card_image").alt = product.name;
+    card.querySelector(".card_image").alt =
+      product.name;
 
     card.querySelector(".info_category").textContent =
       product.category;
@@ -50,8 +58,8 @@ function renderCards(cards) {
     card.querySelector(".card_price").textContent =
       product.price;
 
-    card.querySelector(".money").textContent = " ₽";
-
+    card.querySelector(".money").textContent =
+      " ₽";
 
     // Добавляем компоненты
 
@@ -61,18 +69,17 @@ function renderCards(cards) {
       const li = document.createElement("li");
 
       li.textContent = component;
+
       substances.append(li);
     });
 
     productContainer.append(card);
-    });
+  });
 }
-
 
 // 4. Получаем количество карточек
 
 const amountOfCards = getAmountOfCards();
-
 
 // 5. Выводим нужное количество карточек
 
