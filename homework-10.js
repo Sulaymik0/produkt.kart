@@ -1,4 +1,5 @@
-import { productCards } from "./productCards.js";
+
+import { productCards } from "./productСards.js";
 
 const productContainer = document.querySelector(".bosslist");
 const template = document.querySelector("#card-template");
@@ -17,7 +18,6 @@ const productDescriptions = productCards.reduce((acc, product) => {
 
 console.log(productDescriptions);
 
-
 // 2. Получаем количество карточек через prompt
 
 function getAmountOfCards() {
@@ -32,7 +32,6 @@ function getAmountOfCards() {
   return null;
 }
 
-
 // 3. Создаём карточки
 
 function renderCards(cards) {
@@ -41,9 +40,11 @@ function renderCards(cards) {
   cards.forEach((product) => {
     const card = template.content.cloneNode(true);
 
-    card.querySelector(".card_image").src = `./images/${product.photo}.png`;
+    card.querySelector(".card_image").src =
+      `./images/${product.photo}.png`;
 
-    card.querySelector(".card_image").alt = product.name;
+    card.querySelector(".card_image").alt =
+      product.name;
 
     card.querySelector(".info_category").textContent =
       product.category;
@@ -57,8 +58,8 @@ function renderCards(cards) {
     card.querySelector(".card_price").textContent =
       product.price;
 
-    card.querySelector(".money").textContent = " ₽";
-
+    card.querySelector(".money").textContent =
+      " ₽";
 
     // Добавляем компоненты
 
@@ -76,11 +77,9 @@ function renderCards(cards) {
   });
 }
 
-
 // 4. Получаем количество карточек
 
 const amountOfCards = getAmountOfCards();
-
 
 // 5. Выводим нужное количество карточек
 
