@@ -1,46 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
     <main class="catalog">
-     <div class="container catalog_container">
-      <h1 class="title catalog_title">Выбери свой продукт</h1>
-       <button id="change-Color-all-card">Cменить цвет всех карточек</button>
-       <button id="change-Color-first-card">Cменить цвет первой карточки</button>
-       <button id="open-google">Открыть страницу Google.com</button>
-       <button id="output-console-log">Вывести собщение в консоль лог</button>
-    <ul class="bosslist"></ul>
-      <template id="card-template">
-  <li class="card">
-    <img class="card_image" src="" alt="">
+      <div class="container catalog_container">
+        <h1 class="title catalog_title">Выбери свой продукт</h1>
 
-    <span class="info_category"></span>
+        <button id="change-Color-all-card">
+          Сменить цвет всех карточек
+        </button>
+        <button id="change-Color-first-card">
+          Сменить цвет первой карточки
+        </button>
+        <button id="open-google">Открыть страницу Google.com</button>
+        <button id="output-console-log">
+          Вывести сообщение в консоль
+        </button>
 
-    <h2 class="subtitle_name"></h2>
+        <ul class="bosslist"></ul>
 
-    <p class="card_description"></p>
+        <template id="card-template">
+          <li class="card">
+            <img class="card_image" src="" alt="">
 
-    <div class="card_compound compound">
+            <span class="info_category"></span>
+            <h2 class="subtitle_name"></h2>
+            <p class="card_description"></p>
+
+            <div class="card_compound compound"></div>
+
+            <span class="compound_consist">Состав:</span>
+            <ul class="substances"></ul>
+
+            <div class="price_wrapper">
+              <b class="card_price">Цена</b>
+              <span class="money"></span>
+            </div>
+          </li>
+        </template>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <p class="footer-title">Product Cards</p>
+          <p class="footer-text">У нас самые лучшие продукты для кожи!</p>
+
+          <div class="footer-socials">
+            <a href="#">
+              <img
+                class="socials__icons"
+                src="./img/tg@1x.png"
+                alt="Telegram"
+              >
+            </a>
+            <a href="#">
+              <img
+                class="socials__icons"
+                src="./img/vk@1x.png"
+                alt="Вконтакте"
+              >
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-subscribe">
+          <p class="footer-subscribe__text">Подпишись на наши акции:</p>
+
+          <form id="email-form">
+            <div class="form-wrapper">
+              <input
+                class="form-wrapper__input"
+                name="email"
+                type="email"
+                required
+                placeholder="Введите Email..."
+              >
+              <span class="footer-subscribe__divider"></span>
+              <button class="form-wrapper__button" type="submit">
+                Подписаться
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <nav class="footer-navigation">
+          <p class="footer__links-title">Быстрые ссылки</p>
+          <a class="footer__link" href="#">Главная</a>
+          <a class="footer__link" href="#">Магазин</a>
+          <a class="footer__link" href="#">Контакты</a>
+        </nav>
+      </div>
+
+      <p class="footer-copyright">
+        www.product-cards.Sulaymik0.
+      </p>
+    </footer>
+
+    <div class="overlay"></div>
+
+    <div class="modal">
+      <form id="registration-form" novalidate>
+        <label>
+          Имя
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            placeholder="Введите ваше имя..."
+          >
+        </label>
+
+        <label>
+          Фамилия
+          <input
+            id="surname"
+            name="surname"
+            type="text"
+            required
+            placeholder="Введите вашу фамилию..."
+          >
+        </label>
+
+        <label>
+          Дата рождения
+          <input
+            id="birth-date"
+            name="birthDate"
+            type="date"
+            required
+          >
+        </label>
+
+        <label>
+          Логин
+          <input
+            id="login"
+            name="login"
+            type="text"
+            required
+            placeholder="Введите логин..."
+          >
+        </label>
+
+        <label>
+          Пароль
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            placeholder="Пароль..."
+          >
+        </label>
+
+        <label>
+          Повтор пароля
+          <input
+            id="repeat-password"
+            name="repeatPassword"
+            type="password"
+            required
+            placeholder="Повтор пароля..."
+          >
+        </label>
+
+        <button type="submit">Зарегистрироваться</button>
+      </form>
     </div>
 
-    <span class="compound_consist">Состав:</span>
-
-    <ul class="substances">
-
-    </ul>
-
-    <div class="price_wrapper">
-      <b class="card_price">Цена</b>
-      <span class="money"></span>
-    </div>
-  </li>
-</template>
-</main>
-<script type="module" src="./homework-10.js"></script>
-</body>
+    <script type="module" src="./homework-10.js"></script>
+    <script type="module" src="./homework-11.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

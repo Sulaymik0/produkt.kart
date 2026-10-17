@@ -46,3 +46,7 @@ function outputConsoleLog(message) {
 }
 
 outputConsoleLog('дз №7')
+
+
+
+
