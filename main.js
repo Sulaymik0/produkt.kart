@@ -1,11 +1,19 @@
-import './products.js';
-import './homework-7.js';
-import './homework-8.js';
-import './homework-9.js';
-import './homework-10.js';
-import './homework-11.js';
-import './homework-12.js';
-import './Form.js';
+import "./productCards.js";
+import "./homework-7.js";
+import "./homework-8.js";
+import "./homework-9.js";
+import "./homework-10.js";
+import "./homework-11.js";
+import "./homework-12.js";
+import "./form.js";
+import Modal from "./modal.js";
+
+
+const registrationModal = new Modal("registration-modal");
+
+document.querySelector("#subscribe-btn")?.addEventListener("click", () => {
+  registrationModal.close();
+});
 
 
 // покраска  всех карточек
@@ -56,7 +64,3 @@ function outputConsoleLog(message) {
 }
 
 outputConsoleLog('дз №7')
-
-
-
-
